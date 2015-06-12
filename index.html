@@ -42,11 +42,9 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Select two cards from the grid shown. If they match, you earn points! If not, you lose points! Try to win lots of points!">Instructions</a></li>
-			  
-            <li><a href="#">Credits</a></li>
           </ul>
           <form class="navbar-form navbar-right">
-            <button class="btn btn-sm btn-success btn-start">Restart</button>
+            <button class="btn btn-sm btn-primary btn-success btn-start outline">Restart</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
@@ -69,18 +67,16 @@
       </div>
       <div class="game-container">
         <h1>Let's Play!</h1>
-        <p>Click below to start your game. Here's how you play:</p>
-        <ol class="instructions">
-          <li>Select two cards from the grid shown.</li>
-          <li>If they match, you earn points! If not, you lose points!</li>
-          <li>Try to win lots of points!</li>
-        </ol>
-        <p><button class="btn btn-lg btn-success btn-start">Start the Game</button></p>
+        <h4>Click below to start your game. Here's how you play:</h4>
+        <p>1.  Select two cards from the grid shown.</p>
+        <p>2.  If they match, you earn points! If not, you lose points</p>
+        <p>3.  Try to win lots of points!</p>
+        <p><button class="btn btn-primary btn-lg btn-success btn-start outline">Start Game</button></p>
       </div>
       <hr>
 
       <footer>
-		<img src="img/creator.jpg" alt="Illustrations by Azul Pineiro">
+		<a href="http://azulpineiro.blogspot.com" target="_blank"><img src="img/creator.jpg" alt="Illustrations by Azul Pineiro"></a>
 		<p>&copy; Katie Cann 2015</p>
       </footer>
     </div> <!-- /container -->
@@ -89,17 +85,17 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Game Over</h4>
+            <h3 class="modal-title">Game Over</h3>
           </div>
           <div class="modal-body">
-            <p>Congratulations! You finished the game.</p>
+            <h4>High Five! You finished the game!</h4>
             <p class="final-matches-wrapper"><span class="final-matches-label">Matches</span> <span class="final-matches">000</span></p>
             <p class="final-guesses-wrapper"><span class="final-guesses-label">Guesses</span> <span class="final-guesses">000</span></p>
             <p class="final-score-wrapper"><span class="final-score-label">Score</span> <span class="final-score">000</span></p>
             <p class="final-rating-wrapper"><span class="final-rating-label">Rating</span> <span class="final-rating">000</span></p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success play-again" data-dismiss="modal">Play Again</button>
+            <button type="button" class="btn btn-primary btn-success play-again outline" data-dismiss="modal">Play Again</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->

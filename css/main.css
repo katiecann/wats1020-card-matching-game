@@ -3,11 +3,50 @@
    ========================================================================== */
 body {
 	background: url('../img/retina_wood_@2X.png') repeat;
+    padding-top: 10rem;
 }
 
+h1 {
+    font-family: Georgia, serif;
+    font-size: 60px;
+}
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: white;
+    color: white;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: white;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: white;
+    box-shadow: none;
+}
+.btn.outline {
+    background: none;
+    padding: 12px 22px;
+}
+.btn-primary.outline {
+    border: 3px solid white;
+    color: white;
+}
 .game-container {
     padding: 1rem;
     overflow: hidden;
+    text-align: center;
 }
 .info-display {
     margin-top: 1rem;
@@ -40,7 +79,14 @@ body {
 hr {
     clear: both;
 }
-
+.modal-content {
+    text-align: center;
+    background: #3E403F;
+    color: white;
+}
+.modal-footer{
+    text-align: center;
+}
 footer img {
 	width: 120px;
 	margin-bottom: 30px;
