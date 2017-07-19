@@ -39,19 +39,40 @@
           <a class="navbar-brand" href="#">Card Matching Game</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Instructions</a></li>
-            <li><a href="#">Credits</a></li>
-          </ul>
+          <div class="navbar-form navbar-right">
+            <button class="btn btn-sm btn-primary btn-success outline" data-toggle="modal" data-target="#instructModal">Instructions</button>
+          </div>
           <form class="navbar-form navbar-right">
-            <button class="btn btn-sm btn-success btn-start">Restart</button>
+            <button class="btn btn-sm btn-primary btn-success btn-start outline">Restart</button>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
 
+    <!-- Instructions Modal -->
+    <div id="instructModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Game Instructions</h4>
+          </div>
+          <div class="modal-body">
+            <p>Select two cards from the grid shown. If they match, you earn points! If not, you lose points! Try to win lots of points!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-primary btn-success outline" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- End Instructions Modal -->
+
     <div class="container">
-      <div class="info-display row hidden">
+      <div class="info-display row text-center hidden">
         <div class="col-xs-4">
           <span class="score-label">Matches: </span>
           <span class="matches-display">0</span>
@@ -67,13 +88,11 @@
       </div>
       <div class="game-container">
         <h1>Let's Play!</h1>
-        <p>Click below to start your game. Here's how you play:</p>
-        <ol class="instructions">
-          <li>Select two cards from the grid shown.</li>
-          <li>If they match, you earn points! If not, you lose points!</li>
-          <li>Try to win lots of points!</li>
-        </ol>
-        <p><button class="btn btn-lg btn-success btn-start">Start the Game</button></p>
+        <h4>Click below to start your game. Here's how you play:</h4>
+        <p>1.  Select two cards from the grid shown.</p>
+        <p>2.  If they match, you earn points! If not, you lose points</p>
+        <p>3.  Try to win lots of points!</p>
+        <div class="main-start-button"><button class="btn btn-primary btn-lg btn-success btn-start outline">Start Game</button></div>
       </div>
       <hr>
 

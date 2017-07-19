@@ -28,7 +28,7 @@ var startGame = function(){
     gameContainer.empty();
     infoDisplay.removeClass('hidden');
 
-    var cardList = $('<ul>').attr({
+    var cardList = $('<div class="row">').attr({
         id: 'card-list'
     }).appendTo(gameContainer);
     buildGameBoard();
@@ -38,8 +38,8 @@ var buildGameBoard = function(){
     var cardList = $('#card-list');
     $.each(gameState.cards, function(key, card){
         var cardImagePath = 'img/deck/' + card.file;
-        var newCardItem = $('<li>').attr({
-            class: 'card',
+        var newCardItem = $('<div>').attr({
+            class: 'card col-xs-12 col-sm-6 col-md-2',
             style: 'background: url("' + cardImagePath + '") top left no-repeat;background-size:contain;',
             'data-slug': card.slug,
             'data-name': card.name,
@@ -107,7 +107,7 @@ var addCardListener = function(newCardItem){
 
 var deactivateMatchedCards = function(card){
     // Remove card instances from active play after a match is made
-    var matchedCards = $('li[data-slug="' + card.slug + '"].card')
+    var matchedCards = $('div[data-slug="' + card.slug + '"].card')
     matchedCards.off('click');
     matchedCards.removeClass('card').addClass('matchedCard');
     gameState.cardsLeft = gameState.cardsLeft - (gameState.cardsMatched.length * 2);
@@ -127,8 +127,8 @@ var updateInfoDisplay = function(){
 };
 
 var resetGuess = function(){
-    $('li[data-slug="'+ gameState.currentGuess[0].slug +'"] .back').fadeIn();
-    $('li[data-slug="'+ gameState.currentGuess[1].slug +'"] .back').fadeIn();
+    $('div[data-slug="'+ gameState.currentGuess[0].slug +'"] .back').fadeIn();
+    $('div[data-slug="'+ gameState.currentGuess[1].slug +'"] .back').fadeIn();
     gameState.currentGuess = [];
 }
 
